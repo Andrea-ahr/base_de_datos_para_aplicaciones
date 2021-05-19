@@ -1,0 +1,14 @@
+SHOW CREATE TABLE `tienda_acme_ahr`.`productos`;
+SELECT * FROM `tienda_acme_ahr`.`productos` LIMIT 1000;
+SHOW CREATE TABLE `tienda_acme_ahr`.`usuarios`;
+SELECT * FROM `tienda_acme_ahr`.`usuarios` LIMIT 1000;
+SHOW CREATE TABLE `tienda_acme_ahr`.`productos`;
+SELECT * FROM `tienda_acme_ahr`.`productos` LIMIT 1000;
+INSERT INTO `tienda_acme_ahr`.`productos` (`sku`, `nombre_producto`, `descripcion`, `precio_unitario`) VALUES ('EFOGFB', 'Axion ', 'Javon para trastes', '$25');
+/* Error de SQL (1265): Data truncated for column 'precio_unitario' at row 1 */
+INSERT INTO `tienda_acme_ahr`.`productos` (`sku`, `nombre_producto`, `descripcion`, `precio_unitario`) VALUES ('EFOGFB', 'Axion ', 'Javon para trastes', '25');
+SELECT `sku`, `nombre_producto`, `descripcion`, `precio_unitario` FROM `tienda_acme_ahr`.`productos` WHERE  `sku`='EFOGFB' AND `nombre_producto`='Axion ' AND `descripcion`='Javon para trastes' AND `precio_unitario`=25 LIMIT 1;
+INSERT INTO `tienda_acme_ahr`.`productos` (`sku`, `nombre_producto`, `descripcion`, `precio_unitario`) VALUES ('GKOPRVT', 'Coca Cola', 'Bebidas', '40');
+SELECT `sku`, `nombre_producto`, `descripcion`, `precio_unitario` FROM `tienda_acme_ahr`.`productos` WHERE  `sku`='GKOPRVT' AND `nombre_producto`='Coca Cola' AND `descripcion`='Bebidas' AND `precio_unitario`=40 LIMIT 1;
+INSERT INTO `tienda_acme_ahr`.`productos` (`sku`, `nombre_producto`, `descripcion`, `precio_unitario`) VALUES ('wdikfbttf', 'Sabritas', 'Comida chatarra', '13');
+SELECT `sku`, `nombre_producto`, `descripcion`, `precio_unitario` FROM `tienda_acme_ahr`.`productos` WHERE  `sku`='wdikfbttf' AND `nombre_producto`='Sabritas' AND `descripcion`='Comida chatarra' AND `precio_unitario`=13 LIMIT 1;
